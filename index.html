@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Rainfall Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+            font-size: 1.25rem;
+        }
+        /* Table theme colors */
+        .theme-blue h2 { color: #2b6cb0; border-color: #2b6cb0; }
+        .theme-teal h2 { color: #2c7a7b; border-color: #2c7a7b; }
+        .theme-purple h2 { color: #6b46c1; border-color: #6b46c1; }
+        .theme-orange h2 { color: #dd6b20; border-color: #dd6b20; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px 15px;
+            font-size: 0.95rem;
+        }
+        th {
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        /* Alternating striping styles */
+        .theme-blue th { background-color: #3182ce; }
+        .theme-blue tr:nth-child(even) { background-color: #ebf8ff; }
+        
+        .theme-teal th { background-color: #319795; }
+        .theme-teal tr:nth-child(even) { background-color: #e6fffa; }
+        
+        .theme-purple th { background-color: #805ad5; }
+        .theme-purple tr:nth-child(even) { background-color: #faf5ff; }
+        
+        .theme-orange th { background-color: #ed8936; }
+        .theme-orange tr:nth-child(even) { background-color: #fffaf0; }
+
+        tr { border-bottom: 1px solid #e2e8f0; }
+        tr:hover { background-color: #f7fafc !important; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌧️ Historical Rainfall Analytics</h1>
+    
+    <div class="grid">
+        <!-- Table 1 -->
+        <div class="card theme-blue">
+            <h2>1. Maximum Rainfall by Day of Week</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day of Week</th>
+                        <th>Max Rainfall</th>
+                        <th>Date of Occurrence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday</td><td>2.77 in</td><td>2026-07-06</td></tr><tr><td>Tuesday</td><td>2.94 in</td><td>2021-10-26</td></tr><tr><td>Wednesday</td><td>2.53 in</td><td>2021-09-01</td></tr><tr><td>Thursday</td><td>2.81 in</td><td>2026-08-20</td></tr><tr><td>Friday</td><td>5.56 in</td><td>2023-09-29</td></tr><tr><td>Saturday</td><td>2.72 in</td><td>2024-03-23</td></tr><tr><td>Sunday</td><td>2.92 in</td><td>2023-12-10</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 2 -->
+        <div class="card theme-teal">
+            <h2>2. Frequency of Rainfall Occurrence</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day of Week</th>
+                        <th>Rainy Days / Total</th>
+                        <th>Frequency (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday</td><td>97 / 298</td><td>32.6%</td></tr><tr><td>Tuesday</td><td>84 / 299</td><td>28.1%</td></tr><tr><td>Wednesday</td><td>100 / 298</td><td>33.6%</td></tr><tr><td>Thursday</td><td>107 / 300</td><td>35.7%</td></tr><tr><td>Friday</td><td>102 / 298</td><td>34.2%</td></tr><tr><td>Saturday</td><td>104 / 294</td><td>35.4%</td></tr><tr><td>Sunday</td><td>117 / 298</td><td>39.3%</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 3 -->
+        <div class="card theme-purple">
+            <h2>3. Top 10 Rainfall Months</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Total Precipitation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>March 2024</td><td>9.51 in</td></tr><tr><td>September 2023</td><td>8.29 in</td></tr><tr><td>December 2023</td><td>8.22 in</td></tr><tr><td>July 2021</td><td>7.79 in</td></tr><tr><td>July 2026</td><td>6.88 in</td></tr><tr><td>August 2026</td><td>6.35 in</td></tr><tr><td>August 2021</td><td>6.23 in</td></tr><tr><td>August 2024</td><td>6.23 in</td></tr><tr><td>September 2021</td><td>5.81 in</td></tr><tr><td>January 2024</td><td>5.59 in</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 4 -->
+        <div class="card theme-orange">
+            <h2>4. Top 10 Consecutive Rain Streaks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Streak Length</th>
+                        <th>Accumulated Rain</th>
+                        <th>Date Window</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>9 Days</td><td>1.20 in</td><td>2025-03-28 to 2025-04-05</td></tr><tr><td>7 Days</td><td>3.50 in</td><td>2023-04-28 to 2023-05-04</td></tr><tr><td>6 Days</td><td>1.49 in</td><td>2022-04-14 to 2022-04-19</td></tr><tr><td>5 Days</td><td>2.31 in</td><td>2026-03-03 to 2026-03-07</td></tr><tr><td>5 Days</td><td>1.82 in</td><td>2024-08-06 to 2024-08-10</td></tr><tr><td>4 Days</td><td>3.13 in</td><td>2026-07-03 to 2026-07-06</td></tr><tr><td>4 Days</td><td>3.04 in</td><td>2026-09-25 to 2026-09-28</td></tr><tr><td>4 Days</td><td>2.02 in</td><td>2021-05-27 to 2021-05-30</td></tr><tr><td>4 Days</td><td>1.83 in</td><td>2021-06-30 to 2021-07-03</td></tr><tr><td>4 Days</td><td>1.52 in</td><td>2024-12-16 to 2024-12-19</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -41,11 +41,11 @@
             border-bottom: 3px solid;
             font-size: 1.25rem;
         }
-        /* Table theme colors */
         .theme-blue h2 { color: #2b6cb0; border-color: #2b6cb0; }
         .theme-teal h2 { color: #2c7a7b; border-color: #2c7a7b; }
         .theme-purple h2 { color: #6b46c1; border-color: #6b46c1; }
         .theme-orange h2 { color: #dd6b20; border-color: #dd6b20; }
+        .theme-amber h2 { color: #b7791f; border-color: #b7791f; }
 
         table {
             width: 100%;
@@ -63,7 +63,6 @@
             font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
-        /* Alternating striping styles */
         .theme-blue th { background-color: #3182ce; }
         .theme-blue tr:nth-child(even) { background-color: #ebf8ff; }
         
@@ -75,6 +74,9 @@
         
         .theme-orange th { background-color: #ed8936; }
         .theme-orange tr:nth-child(even) { background-color: #fffaf0; }
+        
+        .theme-amber th { background-color: #d69e2e; }
+        .theme-amber tr:nth-child(even) { background-color: #fefcbf; }
 
         tr { border-bottom: 1px solid #e2e8f0; }
         tr:hover { background-color: #f7fafc !important; }
@@ -86,7 +88,6 @@
     <h1>🌧️ Historical Rainfall Analytics</h1>
     
     <div class="grid">
-        <!-- Table 1 -->
         <div class="card theme-blue">
             <h2>1. Maximum Rainfall by Day of Week</h2>
             <table>
@@ -102,8 +103,6 @@
                 </tbody>
             </table>
         </div>
-
-        <!-- Table 2 -->
         <div class="card theme-teal">
             <h2>2. Frequency of Rainfall Occurrence</h2>
             <table>
@@ -115,12 +114,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Monday</td><td>97 / 302</td><td>32.1%</td></tr><tr><td>Tuesday</td><td>84 / 303</td><td>27.7%</td></tr><tr><td>Wednesday</td><td>101 / 301</td><td>33.6%</td></tr><tr><td>Thursday</td><td>107 / 303</td><td>35.3%</td></tr><tr><td>Friday</td><td>103 / 301</td><td>34.2%</td></tr><tr><td>Saturday</td><td>105 / 297</td><td>35.4%</td></tr><tr><td>Sunday</td><td>117 / 301</td><td>38.9%</td></tr>
+                    <tr><td>Monday</td><td>97 / 302</td><td>32.1%</td></tr><tr><td>Tuesday</td><td>84 / 303</td><td>27.7%</td></tr><tr><td>Wednesday</td><td>101 / 302</td><td>33.4%</td></tr><tr><td>Thursday</td><td>107 / 303</td><td>35.3%</td></tr><tr><td>Friday</td><td>103 / 301</td><td>34.2%</td></tr><tr><td>Saturday</td><td>105 / 297</td><td>35.4%</td></tr><tr><td>Sunday</td><td>117 / 301</td><td>38.9%</td></tr>
                 </tbody>
             </table>
         </div>
-
-        <!-- Table 3 -->
         <div class="card theme-purple">
             <h2>3. Top 10 Rainfall Months</h2>
             <table>
@@ -135,8 +132,6 @@
                 </tbody>
             </table>
         </div>
-
-        <!-- Table 4 -->
         <div class="card theme-orange">
             <h2>4. Top 10 Consecutive Rain Streaks</h2>
             <table>
@@ -149,6 +144,20 @@
                 </thead>
                 <tbody>
                     <tr><td>9 Days</td><td>1.20 in</td><td>2025-03-28 to 2025-04-05</td></tr><tr><td>7 Days</td><td>3.50 in</td><td>2023-04-28 to 2023-05-04</td></tr><tr><td>6 Days</td><td>1.49 in</td><td>2022-04-14 to 2022-04-19</td></tr><tr><td>5 Days</td><td>2.31 in</td><td>2026-03-03 to 2026-03-07</td></tr><tr><td>5 Days</td><td>1.82 in</td><td>2024-08-06 to 2024-08-10</td></tr><tr><td>4 Days</td><td>3.13 in</td><td>2026-07-03 to 2026-07-06</td></tr><tr><td>4 Days</td><td>3.04 in</td><td>2026-09-25 to 2026-09-28</td></tr><tr><td>4 Days</td><td>2.02 in</td><td>2021-05-27 to 2021-05-30</td></tr><tr><td>4 Days</td><td>1.83 in</td><td>2021-06-30 to 2021-07-03</td></tr><tr><td>4 Days</td><td>1.52 in</td><td>2024-12-16 to 2024-12-19</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card theme-amber">
+            <h2>5. Top 10 Consecutive Dry Streaks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Streak Length</th>
+                        <th>Date Window</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>33 Days</td><td>2024-10-08 to 2024-11-09</td></tr><tr><td>18 Days</td><td>2026-10-18 to 2026-11-04</td></tr><tr><td>16 Days</td><td>2021-05-11 to 2021-05-26</td></tr><tr><td>16 Days</td><td>2021-03-02 to 2021-03-17</td></tr><tr><td>15 Days</td><td>2024-09-08 to 2024-09-22</td></tr><tr><td>13 Days</td><td>2022-01-21 to 2022-02-02</td></tr><tr><td>13 Days</td><td>2023-11-08 to 2023-11-20</td></tr><tr><td>12 Days</td><td>2023-05-25 to 2023-06-05</td></tr><tr><td>12 Days</td><td>2025-01-19 to 2025-01-30</td></tr><tr><td>12 Days</td><td>2026-01-26 to 2026-02-06</td></tr>
                 </tbody>
             </table>
         </div>
